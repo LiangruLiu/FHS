@@ -25,7 +25,7 @@ h3 { counter-reset: h4cntr; }
 h4 { }
 h2:before {
 	counter-increment: h2cntr;
-	content: counter(h2cntr) "&nbsp;";
+	content: counter(h2cntr) "&amp;nbsp;";
 }
 h3:before {
 	counter-increment: h3cntr;
