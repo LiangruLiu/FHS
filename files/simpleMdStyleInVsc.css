@@ -30,11 +30,11 @@ h2:before {
 h3:before {
 	counter-increment: h3cntr;
 	content: counter(h2cntr) "."
-			counter(h3cntr) ".\0000a0\0000a0";
+			counter(h3cntr) "\00A0\00A0";
 }
 h4:before {
 	counter-increment: h4cntr;
 	content: counter(h2cntr) "."
 			counter(h3cntr) "."
-			counter(h4cntr) ".\0000a0\0000a0";
+			counter(h4cntr) "\00A0\00A0";
 }
