@@ -18,3 +18,23 @@ h4 {
 	margin-top: 1.8em;
 	margin-bottom: 0.9em;
 }
+
+h1 { counter-reset: h2cntr; }
+h2 { counter-reset: h3cntr; }
+h3 { counter-reset: h4cntr; }
+h4 { }
+h2:before {
+	counter-increment: h2cntr;
+	content: counter(h2cntr) "&nbsp;";
+}
+h3:before {
+	counter-increment: h3cntr;
+	content: counter(h2cntr) "."
+			counter(h3cntr) ".\0000a0\0000a0";
+}
+h4:before {
+	counter-increment: h4cntr;
+	content: counter(h2cntr) "."
+			counter(h3cntr) "."
+			counter(h4cntr) ".\0000a0\0000a0";
+}
