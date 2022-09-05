@@ -38,3 +38,7 @@ h4:before {
 			counter(h3cntr) "."
 			counter(h4cntr) "\00A0\00A0";
 }
+
+img {
+	max-width: min(100%,64em);
+}
