@@ -1,3 +1,16 @@
+/* 浅色模式与深色模式 */
+
+:root {
+	--code-back: #F0F0F0;
+}
+@media (prefers-color-scheme: dark) {
+:root {
+	--code-back: #303030;
+}
+}
+
+/* 各级标题尺寸 */
+
 h1 {
 	font-size: 2.2em;
 	margin-top: 0.6em;
@@ -19,6 +32,8 @@ h4 {
 	margin-bottom: 0.9em;
 }
 
+/* 标题自动编号 */
+
 h1 { counter-reset: h2cntr; }
 h2 { counter-reset: h3cntr; }
 h3 { counter-reset: h4cntr; }
@@ -39,6 +54,18 @@ h4:before {
 			counter(h4cntr) "\00A0\00A0";
 }
 
+/* 图片尺寸 */
+
 img {
-	max-width: min(100%,64em);
+	min-width: 30em;
+	max-width: min(100%,60em);
+}
+
+/* 行内代码背景色 */
+
+code {
+	margin: 0 0.2em 0 0.2em;
+	padding: 0.08em 0.2em 0.08em 0.2em;
+	background-color: var(--code-back);
+	border-radius: 0.3em;
 }
