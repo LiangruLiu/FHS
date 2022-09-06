@@ -59,6 +59,7 @@ h4:before {
 img {
 	min-width: 30em;
 	max-width: min(100%,60em);
+	border-radius: 0.3em;
 }
 
 /* 行内代码背景色 */
@@ -68,4 +69,15 @@ code {
 	padding: 0.08em 0.2em 0.08em 0.2em;
 	background-color: var(--code-back);
 	border-radius: 0.3em;
+}
+
+/* 代码块边框 */
+
+pre>code {
+	margin: 0;
+	padding: 0;
+	background-color: #00000000;
+}
+pre {
+	border: 2px solid #707070;
 }
