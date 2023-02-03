@@ -37,7 +37,6 @@ h4 {
 h1 { counter-reset: h2cntr; }
 h2 { counter-reset: h3cntr; }
 h3 { counter-reset: h4cntr; }
-h4 { }
 h2:before {
 	counter-increment: h2cntr;
 	content: counter(h2cntr) "\00A0\00A0";
@@ -54,10 +53,15 @@ h4:before {
 			counter(h4cntr) "\00A0\00A0";
 }
 
+/* 段落首行缩进 */
+
+p {
+	text-indent: 2em;
+}
+
 /* 图片尺寸 */
 
 img {
-	min-width: 30em;
 	max-width: min(100%,60em);
 	border-radius: 0.3em;
 }
@@ -65,8 +69,9 @@ img {
 /* 行内代码背景色 */
 
 code {
-	margin: 0 0.2em 0 0.2em;
-	padding: 0.08em 0.2em 0.08em 0.2em;
+	font-size: 0.9em;
+	margin: 0 0.2em;
+	padding: 0.08em 0.2em;
 	background-color: var(--code-back);
 	border-radius: 0.3em;
 }
